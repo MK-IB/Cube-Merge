@@ -90,21 +90,21 @@ public class InputControl : MonoBehaviour
     }
     void OnSwipeUp()
     {
-        Debug.Log("Swipe UP");
+        InputEventsManager.instance.StartSwipeUpEvent();
     }
 
     void OnSwipeDown()
     {
-        Debug.Log("Swipe Down");
+        InputEventsManager.instance.StartSwipeDownEvent();
     }
 
     void OnSwipeLeft()
     {
-        Debug.Log("Swipe Left");
+        InputEventsManager.instance.StartSwipeLeftEvent();
     }
 
     void OnSwipeRight()
     {
-        Debug.Log("Swipe Right");
+        InputEventsManager.instance.StartSwipeRightEvent();
     }
 }
