@@ -52,7 +52,10 @@ public class CubeMovement : MonoBehaviour
         {
             if (rightHit.collider.CompareTag("border"))
             {
-                canMoveRight = false;    
+                if (_moveDir == transform.right)
+                {
+                    canMoveRight = false;
+                } else canMoveRight = false;    
             }else canMoveRight = true;
             
         }else canMoveRight = true;
@@ -93,7 +96,7 @@ public class CubeMovement : MonoBehaviour
     {
         if (canMove)
         {
-            //   transform.Translate(_moveDir * speed * Time.deltaTime);
+            //transform.Translate(_moveDir * speed * Time.deltaTime);
             _rb.AddForce(_moveDir * speed * Time.fixedDeltaTime, ForceMode.Impulse);
             cubeState = CubeState.MOVING;
         }
@@ -111,24 +114,31 @@ public class CubeMovement : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
+        /*Debug.Log("Move Dir" + _moveDir);
+                Debug.Log("Cubes Dir = " + (transform.position - other.transform.position));*/
         if (other.gameObject.CompareTag("cube"))
         {
             CubeMovement cubeMovement = other.transform.GetComponent<CubeMovement>();
             if (cubeMovement.cubeState == CubeState.IDLE && cubeState == CubeState.MOVING)
             {
-                other.gameObject.SetActive(false);
-            }else if (cubeMovement.cubeState == CubeState.IDLE && cubeState == CubeState.IDLE)
-            {
-                Debug.Log("Idle cube = " + other.gameObject.name);
-                if (_moveDir.normalized == (transform.position - other.transform.position).normalized)
-                {
-                    gameObject.SetActive(false);
-                    
-                }
+                Debug.Log("Move dir = " + GetHigherAxis(_moveDir));
+                Debug.Log("Cube dir = " + GetHigherAxis(transform.position - other.transform.position));
+                
+                if(GetHigherAxis(_moveDir) == GetHigherAxis(transform.position - other.transform.position)) 
+                    other.gameObject.SetActive(false);
             }
         }
     }
+    
 
+    int GetHigherAxis(Vector3 v)
+    {
+        int axisCode = 0;
+        if (Mathf.Abs(v.x) > 0) axisCode = 1;
+        if (Mathf.Abs(v.y) > 0) axisCode = 2;
+        if (Mathf.Abs(v.z) > 0) axisCode = 3;
+        return axisCode;
+    }
     void MoveRight()
     {
         if (canMoveRight)

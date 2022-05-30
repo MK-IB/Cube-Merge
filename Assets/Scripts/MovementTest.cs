@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MovementTest : MonoBehaviour
@@ -12,6 +9,7 @@ public class MovementTest : MonoBehaviour
     private Rigidbody _rb;
     private Collider _collider;
 
+    public int code;
     public enum CubeState1
     {
         IDLE,
@@ -26,7 +24,7 @@ public class MovementTest : MonoBehaviour
         InputEventsManager.instance.SwipeLeftEvent += MoveLeft;
         InputEventsManager.instance.SwipeUpEvent += MoveForward;
         InputEventsManager.instance.SwipeDownEvent += MoveBackward;
-        _maxDist = transform.localScale.x / 2 + 0.01f;
+        _maxDist = 10;
         _rb = GetComponent<Rigidbody>();
         _collider = GetComponent<Collider>();
         cubeState1 = CubeState1.IDLE;
@@ -40,111 +38,172 @@ public class MovementTest : MonoBehaviour
         InputEventsManager.instance.SwipeDownEvent -= MoveBackward;
     }
 
+    private Vector3 _maxMovePos;
     private void Update()
     {
-        Debug.DrawLine(transform.position, transform.right * _maxDist, Color.yellow);
-        Debug.DrawLine(transform.position, -transform.right * _maxDist, Color.red);
-        Debug.DrawLine(transform.position, transform.forward * _maxDist, Color.green);
-        Debug.DrawLine(transform.position, -transform.forward * _maxDist, Color.blue);
+        if(cubeState1 == CubeState1.IDLE)
+        {
+            Debug.DrawRay(transform.position, transform.right * _maxDist, Color.yellow);
+            Debug.DrawRay(transform.position, -transform.right * _maxDist, Color.red);
+            Debug.DrawRay(transform.position, transform.forward * _maxDist, Color.green);
+            Debug.DrawRay(transform.position, -transform.forward * _maxDist, Color.blue);
+        }
 
         RaycastHit hit, rightHit, leftHit, forwardHit, backwardHit;
-        if (Physics.Raycast(transform.position, transform.right, out rightHit, _maxDist))
+
+        #region RIGHT_RAY
+        if (Physics.Raycast(transform.position, transform.right, out rightHit))
         {
-            if (rightHit.collider.CompareTag("border") && _moveDir == transform.right)
+            GameObject hitObject = rightHit.collider.gameObject;
+            if (hitObject.CompareTag("cube") && cubeState1 == CubeState1.IDLE)
             {
-                canMoveRight = false;
-                canMove = false;
+                if (hitObject.transform.GetComponent<MovementTest>().code != code)
+                {
+                    if (Mathf.Abs((hitObject.transform.position.x - 1) - transform.position.x) <= 0)
+                        canMoveRight = false;
+                    else
+                    {
+                        _maxMovePos = new Vector3(hitObject.transform.position.x - 1, 0, transform.position.z);
+                        canMoveRight = true;
+                    }
+                }
+                else 
+                {
+                    hitObject.layer = 2;  
+                }
             }
-            else canMoveRight = true;
-        }
-        else canMoveRight = true;
-
-        if (Physics.Raycast(transform.position, -transform.right, out leftHit, _maxDist))
-        {
-            if (leftHit.collider.CompareTag("border") && _moveDir == -transform.right)
+            if (hitObject.CompareTag("border") && cubeState1 == CubeState1.IDLE)
             {
-                canMoveLeft = false;
-                canMove = false;
+                float xDist = Mathf.Abs((hitObject.transform.position.x - 1) - transform.position.x);
+                if (xDist <= 0)
+                {
+                    canMoveRight = false;
+                    //Debug.Log("can't move");
+                }
+                else
+                {
+                    //Debug.Log("Can Move");
+                    _maxMovePos = new Vector3(hitObject.transform.position.x - 1,0, transform.position.z);
+                    canMoveRight = true;
+                }    
             }
-            else canMoveLeft = true;
         }
-        else canMoveLeft = true;
-
-        if (Physics.Raycast(transform.position, transform.forward, out forwardHit, _maxDist))
+        #endregion
+        #region LEFT_RAY
+        if (Physics.Raycast(transform.position, -transform.right, out leftHit))
         {
-            if (forwardHit.collider.CompareTag("border") && _moveDir == transform.forward)
+            GameObject hitObject = leftHit.collider.gameObject;
+            if (hitObject.CompareTag("cube") && cubeState1 == CubeState1.IDLE)
             {
-                canMoveForward = false;
-                canMove = false;
+                if (hitObject.transform.GetComponent<MovementTest>().code != code)
+                {
+                    if (Mathf.Abs((hitObject.transform.position.x + 1) - transform.position.x) <= 0)
+                        canMoveLeft = false;
+                    else
+                    {
+                        _maxMovePos = new Vector3(hitObject.transform.position.x + 1, 0, transform.position.z);
+                        canMoveLeft = true;
+                    }
+                         
+                }
+                else 
+                {
+                    hitObject.layer = 2;  
+                }
             }
-            else canMoveForward = true;
-        }
-        else canMoveForward = true;
-
-        if (Physics.Raycast(transform.position, -transform.forward, out backwardHit, _maxDist))
-        {
-            if (backwardHit.collider.CompareTag("border") && _moveDir == -transform.forward)
+            if (hitObject.CompareTag("border") && cubeState1 == CubeState1.IDLE)
             {
-                canMoveBackward = false;
-                canMove = false;
+                float xDist = Mathf.Abs((hitObject.transform.position.x + 1) - transform.position.x);
+                //Debug.Log("x dist = " + xDist + " of " + transform.name);
+                if (xDist <= 0)
+                {
+                    canMoveLeft = false;
+                    //Debug.Log("can't move");
+                }
+                else
+                {
+                    //Debug.Log("Can Move");
+                    _maxMovePos = new Vector3(hitObject.transform.position.x + 1,0, transform.position.z);
+                    canMoveLeft = true;
+                }    
             }
-            else canMoveBackward = true;
         }
-        else canMoveBackward = true;
-    }
-
-    void ChangeToIdleState(Transform hitObj)
-    {
-        if (hitObj.CompareTag("border") /* && cubeState1 == CubeState1.MOVING*/)
-        {
-            cubeState1 = CubeState1.IDLE;
-        }
-    }
-
-    private void FixedUpdate()
-    {
+        #endregion 
         if (canMove)
         {
-            //   transform.Translate(_moveDir * speed * Time.deltaTime);
-            _rb.AddForce(_moveDir * speed * Time.fixedDeltaTime, ForceMode.Impulse);
+            transform.Translate(_moveDir * speed * Time.deltaTime);
             cubeState1 = CubeState1.MOVING;
+            if(Vector3.Distance(transform.position, _maxMovePos) <= 0.1f )
+                StopMovement();
         }
+        
+    }
 
-        if (_rb.velocity.magnitude <= 2.5f)
+    void StopMovement()
+    {
+        canMove = false;
+        transform.position = _maxMovePos;
+        cubeState1 = CubeState1.IDLE;
+    }
+    private void FixedUpdate()
+    {
+        /*if (canMove)
         {
-            isStatic = true;
-            cubeState1 = CubeState1.IDLE;
-        }
-        else
-        {
-            isStatic = false;
+            //_rb.AddForce(_moveDir * speed * Time.fixedDeltaTime, ForceMode.Impulse);
             cubeState1 = CubeState1.MOVING;
+        }*/
+    }
+
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("cube") && cubeState1 == CubeState1.MOVING)
+        {
+            if(other.GetComponent<MovementTest>().code == code)
+                other.gameObject.SetActive(false);
         }
     }
-    
-
-
+    int GetHigherAxis(Vector3 v)
+    {
+        int axisCode = 0;
+        if (Mathf.Abs(v.x) > 0) axisCode = 1;
+        if (Mathf.Abs(v.y) > 0) axisCode = 2;
+        if (Mathf.Abs(v.z) > 0) axisCode = 3;
+        return axisCode;
+    }
     void MoveRight()
     {
-        _moveDir = transform.right;
-        canMove = true;
+        if(canMoveRight)
+        {
+            _moveDir = transform.right;
+            canMove = true;
+        }
     }
 
     void MoveLeft()
     {
-        _moveDir = -transform.right;
-        canMove = true;
+        if(canMoveLeft)
+        {
+            _moveDir = -transform.right;
+            canMove = true;
+        }
     }
 
     void MoveForward()
     {
-        _moveDir = transform.forward;
-        canMove = true;
+        if(canMoveForward)
+        {
+            _moveDir = transform.forward;
+            canMove = true;
+        }
     }
 
     void MoveBackward()
     {
-        _moveDir = -transform.forward;
-        canMove = true;
+        if(canMoveBackward)
+        {
+            _moveDir = -transform.forward;
+            canMove = true;
+        }
     }
 }
