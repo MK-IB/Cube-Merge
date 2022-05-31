@@ -8,21 +8,18 @@ using UnityEngine.SceneManagement;
 public class InGameManager : MonoBehaviour
 {
     public static InGameManager instance;
-    
-    Dictionary<int, string> cubeProperty = new Dictionary<int, string>()
-    {
-        {1, "red"},
-        {2, "blue"},
-        {3, "yellow"},
-        {4, "green"},
-        {5, "violet"},
-    };
+
+    public List<Material> cubeMaterials;
 
     private void Awake()
     {
         instance = this;
     }
 
+    public Material GetUpdatedMaterial(int code)
+    {
+        return cubeMaterials[code - 1];
+    }
     private void Update()
     {
         if (Input.GetMouseButton(1))
@@ -30,7 +27,6 @@ public class InGameManager : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
-
     public void ReloadScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);

@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.PlayerLoop;
 
@@ -8,10 +10,12 @@ public class CubeMovement : MonoBehaviour
 {
     public bool canMove, isStatic, canMoveRight,canMoveLeft, canMoveForward, canMoveBackward;
     private float _maxDist;
-    private Vector3 _moveDir;
+    public Vector3 _moveDir;
     public float speed;
     private Rigidbody _rb;
     private Collider _collider;
+    public int code;
+    public TextMeshPro codeText;
 
     public enum CubeState
     {
@@ -20,6 +24,8 @@ public class CubeMovement : MonoBehaviour
     }
 
     public CubeState cubeState;
+    private ParticleSystem _mergeParticle;
+    private GameObject _cubeEffect;
 
     private void Start()
     {
@@ -31,6 +37,9 @@ public class CubeMovement : MonoBehaviour
         _rb = GetComponent<Rigidbody>();
         _collider = GetComponent<Collider>();
         cubeState = CubeState.IDLE;
+        codeText.text = code.ToString();
+        _mergeParticle = transform.GetChild(0).GetComponent<ParticleSystem>();
+        _cubeEffect = transform.GetChild(1).gameObject;
     }
     private void OnDisable()
     {
@@ -42,22 +51,21 @@ public class CubeMovement : MonoBehaviour
 
     private void Update()
     {
-        Debug.DrawLine(transform.position, transform.right * _maxDist, Color.yellow);
-        Debug.DrawLine(transform.position, -transform.right * _maxDist, Color.red);
-        Debug.DrawLine(transform.position, transform.forward * _maxDist, Color.green);
-        Debug.DrawLine(transform.position, -transform.forward * _maxDist, Color.blue);
+        Debug.DrawRay(transform.position, transform.right * _maxDist, Color.yellow);
+        Debug.DrawRay(transform.position, -transform.right * _maxDist, Color.red);
+        Debug.DrawRay(transform.position, transform.forward * _maxDist, Color.green);
+        Debug.DrawRay(transform.position, -transform.forward * _maxDist, Color.blue);
         
         RaycastHit hit, rightHit, leftHit, forwardHit, backwardHit;
         if (Physics.Raycast(transform.position, transform.right, out rightHit, _maxDist))
         {
             if (rightHit.collider.CompareTag("border"))
             {
-                if (_moveDir == transform.right)
-                {
-                    canMoveRight = false;
-                } else canMoveRight = false;    
-            }else canMoveRight = true;
-            
+                canMoveRight = false;
+            }else if (rightHit.collider.CompareTag("cube"))
+            {
+                
+            }
         }else canMoveRight = true;
         if (Physics.Raycast(transform.position, -transform.right, out leftHit, _maxDist))
         {
@@ -115,21 +123,70 @@ public class CubeMovement : MonoBehaviour
     private void OnCollisionEnter(Collision other)
     {
         /*Debug.Log("Move Dir" + _moveDir);
-                Debug.Log("Cubes Dir = " + (transform.position - other.transform.position));*/
+                Debug.Log("Cubes Dir = " + (transform.position - other.transform.position));#1#*/
         if (other.gameObject.CompareTag("cube"))
         {
-            CubeMovement cubeMovement = other.transform.GetComponent<CubeMovement>();
-            if (cubeMovement.cubeState == CubeState.IDLE && cubeState == CubeState.MOVING)
+            if (code == other.gameObject.GetComponent<CubeMovement>().code)
             {
-                Debug.Log("Move dir = " + GetHigherAxis(_moveDir));
-                Debug.Log("Cube dir = " + GetHigherAxis(transform.position - other.transform.position));
+                Debug.Log("Direction Mag = " + _moveDir.magnitude);
+                if(_moveDir == Vector3.right)
+                {
+                    Debug.Log("Same Cube collision");
+                    if ((other.transform.position.x - transform.position.x) >
+                        (transform.position.x - other.transform.position.x))
+                    {
+                        other.gameObject.SetActive(false);
+                        code += 1;
+                        _mergeParticle.Play();
+                        _cubeEffect.SetActive(true);
+                        GetComponent<Renderer>().material = InGameManager.instance.GetUpdatedMaterial(code);
+                    }
+                }
+                else if(_moveDir == -Vector3.right)
+                {
+                    Debug.Log("Same Cube collision");
+                    if ((other.transform.position.x - transform.position.x) <
+                        (transform.position.x - other.transform.position.x))
+                    {
+                        other.gameObject.SetActive(false);
+                        code += 1;
+                        _mergeParticle.Play();
+                        _cubeEffect.SetActive(true);
+                        GetComponent<Renderer>().material = InGameManager.instance.GetUpdatedMaterial(code);
+                    }
+                }
+                else if(_moveDir == Vector3.forward)
+                {
+                    Debug.Log("Same Cube collision");
+                    if ((other.transform.position.z - transform.position.z) >
+                        (transform.position.z - other.transform.position.z))
+                    {
+                        other.gameObject.SetActive(false);
+                        code += 1;
+                        _mergeParticle.Play();
+                        _cubeEffect.SetActive(true);
+                        GetComponent<Renderer>().material = InGameManager.instance.GetUpdatedMaterial(code);
+                    }
+                }
+                else if(_moveDir == -Vector3.forward)
+                {
+                    Debug.Log("Same Cube collision");
+                    if ((other.transform.position.z - transform.position.z) <
+                        (transform.position.z - other.transform.position.z))
+                    {
+                        other.gameObject.SetActive(false);
+                        code += 1;
+                        _mergeParticle.Play();
+                        _cubeEffect.SetActive(true);
+                        GetComponent<Renderer>().material = InGameManager.instance.GetUpdatedMaterial(code);
+                    }
+                }
                 
-                if(GetHigherAxis(_moveDir) == GetHigherAxis(transform.position - other.transform.position)) 
-                    other.gameObject.SetActive(false);
+                codeText.text = code.ToString();
             }
         }
     }
-    
+
 
     int GetHigherAxis(Vector3 v)
     {
@@ -141,35 +198,39 @@ public class CubeMovement : MonoBehaviour
     }
     void MoveRight()
     {
-        if (canMoveRight)
+        if (canMoveRight && cubeState == CubeState.IDLE)
         {
             _moveDir = transform.right;
-            canMove = true;    
+            canMove = true;
+            _rb.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezeRotation;
         }
         
     }
     void MoveLeft()
     {
-        if (canMoveLeft)
+        if (canMoveLeft && cubeState == CubeState.IDLE)
         {
             _moveDir = -transform.right;
-            canMove = true;    
+            canMove = true;
+            _rb.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezeRotation;
         }
     }
     void MoveForward()
     {
-        if(canMoveForward)
+        if(canMoveForward && cubeState == CubeState.IDLE)
         {
             _moveDir = transform.forward;
             canMove = true;
+            _rb.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezeRotation;
         }
     }
     void MoveBackward()
     {
-        if(canMoveBackward)
+        if(canMoveBackward && cubeState == CubeState.IDLE)
         {
             _moveDir = -transform.forward;
             canMove = true;
+            _rb.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezeRotation;
         }
     }
 }

@@ -8,7 +8,7 @@ public class MovementTest : MonoBehaviour
     public float speed;
     private Rigidbody _rb;
     private Collider _collider;
-
+    private Vector3 gridSize = Vector3.one;
     public int code;
     public enum CubeState1
     {
@@ -55,7 +55,7 @@ public class MovementTest : MonoBehaviour
         if (Physics.Raycast(transform.position, transform.right, out rightHit))
         {
             GameObject hitObject = rightHit.collider.gameObject;
-            if (hitObject.CompareTag("cube") && cubeState1 == CubeState1.IDLE)
+            if (hitObject.CompareTag("cube"))
             {
                 if (hitObject.transform.GetComponent<MovementTest>().code != code)
                 {
@@ -64,6 +64,7 @@ public class MovementTest : MonoBehaviour
                     else
                     {
                         _maxMovePos = new Vector3(hitObject.transform.position.x - 1, 0, transform.position.z);
+                        
                         canMoveRight = true;
                     }
                 }
@@ -72,7 +73,7 @@ public class MovementTest : MonoBehaviour
                     hitObject.layer = 2;  
                 }
             }
-            if (hitObject.CompareTag("border") && cubeState1 == CubeState1.IDLE)
+            if (hitObject.CompareTag("border"))
             {
                 float xDist = Mathf.Abs((hitObject.transform.position.x - 1) - transform.position.x);
                 if (xDist <= 0)
@@ -93,7 +94,7 @@ public class MovementTest : MonoBehaviour
         if (Physics.Raycast(transform.position, -transform.right, out leftHit))
         {
             GameObject hitObject = leftHit.collider.gameObject;
-            if (hitObject.CompareTag("cube") && cubeState1 == CubeState1.IDLE)
+            if (hitObject.CompareTag("cube"))
             {
                 if (hitObject.transform.GetComponent<MovementTest>().code != code)
                 {
@@ -111,7 +112,7 @@ public class MovementTest : MonoBehaviour
                     hitObject.layer = 2;  
                 }
             }
-            if (hitObject.CompareTag("border") && cubeState1 == CubeState1.IDLE)
+            if (hitObject.CompareTag("border"))
             {
                 float xDist = Mathf.Abs((hitObject.transform.position.x + 1) - transform.position.x);
                 //Debug.Log("x dist = " + xDist + " of " + transform.name);
@@ -132,13 +133,25 @@ public class MovementTest : MonoBehaviour
         if (canMove)
         {
             transform.Translate(_moveDir * speed * Time.deltaTime);
+            //SnapToGrid();
             cubeState1 = CubeState1.MOVING;
-            if(Vector3.Distance(transform.position, _maxMovePos) <= 0.1f )
+            float disDiff = Mathf.Abs(Mathf.Abs(_maxMovePos.x) - Mathf.Abs(transform.position.x));
+            Debug.Log("dist diff = " + disDiff);
+            if( disDiff <= 0.75f)
                 StopMovement();
+            /*if(Vector3.Distance(transform.position, _maxMovePos) <= 0.1f )
+                StopMovement();*/
         }
-        
     }
-
+    void SnapToGrid()
+    {
+        Vector3 pos = new Vector3(
+            Mathf.Round(transform.position.x / gridSize.x) * gridSize.x,
+            0,
+            Mathf.Round(transform.position.z / gridSize.z) * gridSize.z
+        );
+        transform.position = pos;
+    }
     void StopMovement()
     {
         canMove = false;
