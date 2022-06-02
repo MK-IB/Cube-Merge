@@ -64,10 +64,8 @@ public class CubeMovement : MonoBehaviour
             if (rightHit.collider.CompareTag("border"))
             {
                 canMoveRight = false;
-            }else if (rightHit.collider.CompareTag("cube"))
-            {
-                
             }
+            else canMoveRight = true;
         }else canMoveRight = true;
         if (Physics.Raycast(transform.position, -transform.right, out leftHit, _maxDist))
         {
@@ -108,9 +106,8 @@ public class CubeMovement : MonoBehaviour
         {
             //transform.Translate(_moveDir * speed * Time.deltaTime);
             _rb.AddForce(_moveDir * speed * Time.fixedDeltaTime, ForceMode.Impulse);
-            cubeState = CubeState.MOVING;
         }
-        if (_rb.velocity.magnitude <= 2.5f)
+        /*if (_rb.velocity.magnitude <= 2.5f)
         {
             isStatic = true;
             cubeState = CubeState.IDLE;
@@ -119,7 +116,7 @@ public class CubeMovement : MonoBehaviour
         {
             isStatic = false;
             cubeState = CubeState.MOVING;
-        }
+        }*/
     }
 
     private void OnCollisionEnter(Collision other)
@@ -212,6 +209,7 @@ public class CubeMovement : MonoBehaviour
             _moveDir = transform.right;
             canMove = true;
             _rb.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezeRotation;
+            InGameManager.instance.RefreshCubeRBs();
         }
         
     }
@@ -222,6 +220,7 @@ public class CubeMovement : MonoBehaviour
             _moveDir = -transform.right;
             canMove = true;
             _rb.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezeRotation;
+            InGameManager.instance.RefreshCubeRBs();
         }
     }
     void MoveForward()
@@ -231,6 +230,7 @@ public class CubeMovement : MonoBehaviour
             _moveDir = transform.forward;
             canMove = true;
             _rb.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezeRotation;
+            InGameManager.instance.RefreshCubeRBs();
         }
     }
     void MoveBackward()
@@ -240,6 +240,7 @@ public class CubeMovement : MonoBehaviour
             _moveDir = -transform.forward;
             canMove = true;
             _rb.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezeRotation;
+            InGameManager.instance.RefreshCubeRBs();
         }
     }
 }

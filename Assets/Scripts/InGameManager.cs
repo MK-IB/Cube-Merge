@@ -42,6 +42,15 @@ public class InGameManager : MonoBehaviour
         else activeCubesCounter = 0;
     }
 
+    public void RefreshCubeRBs()
+    {
+        GameObject[] cubes = GameObject.FindGameObjectsWithTag("cube");
+        for (int i = 0; i < cubes.Length; i++)
+        {
+            cubes[i].GetComponent<Rigidbody>().isKinematic = true;
+            cubes[i].GetComponent<Rigidbody>().isKinematic = false;
+        }
+    }
     IEnumerator LoadNextLevel()
     {
         yield return new WaitForSeconds(1.5f);
