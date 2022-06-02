@@ -26,6 +26,7 @@ public class CubeMovement : MonoBehaviour
     public CubeState cubeState;
     private ParticleSystem _mergeParticle;
     private GameObject _cubeEffect;
+    private TrailRenderer _trailRenderer;
 
     private void Start()
     {
@@ -40,6 +41,7 @@ public class CubeMovement : MonoBehaviour
         codeText.text = code.ToString();
         _mergeParticle = transform.GetChild(0).GetComponent<ParticleSystem>();
         _cubeEffect = transform.GetChild(1).gameObject;
+        _trailRenderer = GetComponent<TrailRenderer>();
     }
     private void OnDisable()
     {
@@ -128,57 +130,48 @@ public class CubeMovement : MonoBehaviour
         {
             if (code == other.gameObject.GetComponent<CubeMovement>().code)
             {
-                Debug.Log("Direction Mag = " + _moveDir.magnitude);
+                //Debug.Log("Direction Mag = " + _moveDir.magnitude);
                 if(_moveDir == Vector3.right)
                 {
-                    Debug.Log("Same Cube collision");
+                    //Debug.Log("Same Cube collision");
                     if ((other.transform.position.x - transform.position.x) >
                         (transform.position.x - other.transform.position.x))
                     {
                         other.gameObject.SetActive(false);
                         code += 1;
-                        _mergeParticle.Play();
-                        _cubeEffect.SetActive(true);
-                        GetComponent<Renderer>().material = InGameManager.instance.GetUpdatedMaterial(code);
+                        PlayEffects();
                     }
                 }
                 else if(_moveDir == -Vector3.right)
                 {
-                    Debug.Log("Same Cube collision");
+                    //Debug.Log("Same Cube collision");
                     if ((other.transform.position.x - transform.position.x) <
                         (transform.position.x - other.transform.position.x))
                     {
                         other.gameObject.SetActive(false);
                         code += 1;
-                        _mergeParticle.Play();
-                        _cubeEffect.SetActive(true);
-                        GetComponent<Renderer>().material = InGameManager.instance.GetUpdatedMaterial(code);
+                        PlayEffects();
                     }
                 }
                 else if(_moveDir == Vector3.forward)
                 {
-                    Debug.Log("Same Cube collision");
                     if ((other.transform.position.z - transform.position.z) >
                         (transform.position.z - other.transform.position.z))
                     {
                         other.gameObject.SetActive(false);
                         code += 1;
-                        _mergeParticle.Play();
-                        _cubeEffect.SetActive(true);
-                        GetComponent<Renderer>().material = InGameManager.instance.GetUpdatedMaterial(code);
+                        PlayEffects();
                     }
                 }
                 else if(_moveDir == -Vector3.forward)
                 {
-                    Debug.Log("Same Cube collision");
+                    //Debug.Log("Same Cube collision");
                     if ((other.transform.position.z - transform.position.z) <
                         (transform.position.z - other.transform.position.z))
                     {
                         other.gameObject.SetActive(false);
                         code += 1;
-                        _mergeParticle.Play();
-                        _cubeEffect.SetActive(true);
-                        GetComponent<Renderer>().material = InGameManager.instance.GetUpdatedMaterial(code);
+                        PlayEffects();
                     }
                 }
                 
@@ -187,6 +180,22 @@ public class CubeMovement : MonoBehaviour
         }
     }
 
+    void PlayEffects()
+    {
+        _mergeParticle.Play();
+        _cubeEffect.SetActive(true);
+        GetComponent<Renderer>().material = InGameManager.instance.GetUpdatedMaterial(code);
+        StartCoroutine(CheckLevelComplete());
+
+        Color matColor = GetComponent<Renderer>().material.color;
+        _trailRenderer.startColor = matColor;
+        _trailRenderer.endColor = matColor;
+    }
+    IEnumerator CheckLevelComplete()
+    {
+        yield return new WaitForSeconds(1);
+        InputEventsManager.instance.StartLevelCompleteEvent();
+    }
 
     int GetHigherAxis(Vector3 v)
     {

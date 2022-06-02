@@ -11,6 +11,7 @@ public class InputEventsManager : MonoBehaviour
     public event Action SwipeLeftEvent;
     public event Action SwipeUpEvent;
     public event Action SwipeDownEvent;
+    public event Action LevelCompleteEvent;
 
     private void Awake()
     {
@@ -37,5 +38,10 @@ public class InputEventsManager : MonoBehaviour
         if (SwipeDownEvent != null)
             SwipeDownEvent();
     }
-    
+
+    public void StartLevelCompleteEvent()
+    {
+        if (LevelCompleteEvent != null)
+            LevelCompleteEvent();
+    }
 }
