@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1877418771067111099}
   - component: {fileID: 1877418771067111098}
   - component: {fileID: 1877418771067111045}
-  - component: {fileID: 1781183821077697283}
+  - component: {fileID: 7962719195283540524}
   m_Layer: 0
   m_Name: CUBE 1 Red
   m_TagString: cube
@@ -230,9 +230,10 @@ MonoBehaviour:
   speed: 200
   code: 1
   codeText: {fileID: 7074674466650848927}
+  bone: {fileID: 0}
   cubeState: 0
---- !u!64 &1781183821077697283
-MeshCollider:
+--- !u!65 &7962719195283540524
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -241,10 +242,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 8718313242848948513, guid: 10e2af7f1eeeae148822961e28616d3c, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 0.92180145, y: 1, z: 0.9495244}
+  m_Center: {x: 0.0027053356, y: 0.0076143146, z: -0.004584551}
 --- !u!1 &2540043784849412514
 GameObject:
   m_ObjectHideFlags: 0
@@ -375,7 +375,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7074674466650848925}
   m_LocalRotation: {x: 0.70710677, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: -0.31983}
+  m_LocalPosition: {x: 0, y: 0, z: -0.319}
   m_LocalScale: {x: 0.8, y: 0.80174106, z: 0.8}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -384,8 +384,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -0.49346, y: 0.531}
-  m_SizeDelta: {x: 1.2041, y: 0.8063}
+  m_AnchoredPosition: {x: -0.49, y: 0.531}
+  m_SizeDelta: {x: 1.2, y: 0.8}
   m_Pivot: {x: 0, y: 0}
 --- !u!23 &7074674466650848926
 MeshRenderer:

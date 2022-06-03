@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEditor.ShaderGraph.Drawing;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -12,6 +13,8 @@ public class InGameManager : MonoBehaviour
     public List<Material> cubeMaterials;
     public GameObject confettiBlast;
     [HideInInspector] public GameObject[] cubes;
+    [HideInInspector] public GameObject[] tiles;
+    private Color _currentMatColor;
  
     private void Awake()
     {
@@ -22,6 +25,7 @@ public class InGameManager : MonoBehaviour
     {
         InputEventsManager.instance.LevelCompleteEvent += CheckLevelComplete;
         cubes = GameObject.FindGameObjectsWithTag("cube");
+        tiles = GameObject.FindGameObjectsWithTag("tile");
     }
 
     void CheckLevelComplete()
@@ -35,26 +39,37 @@ public class InGameManager : MonoBehaviour
 
         if (activeCubesCounter == 1)
         {
-            confettiBlast.SetActive(true);
-            StartCoroutine(LoadNextLevel());
+            for (int i = 0; i < cubes.Length; i++)
+            {
+                if (cubes[i].activeInHierarchy)
+                {
+                    _currentMatColor = cubes[i].GetComponent<Renderer>().material.color;
+                }
+            }
+            StartCoroutine(LevelWinCondition());
         }
         
         else activeCubesCounter = 0;
     }
 
-    public void RefreshCubeRBs()
+    IEnumerator LevelWinCondition()
     {
-        GameObject[] cubes = GameObject.FindGameObjectsWithTag("cube");
-        for (int i = 0; i < cubes.Length; i++)
-        {
-            cubes[i].GetComponent<Rigidbody>().isKinematic = true;
-            cubes[i].GetComponent<Rigidbody>().isKinematic = false;
-        }
-    }
-    IEnumerator LoadNextLevel()
-    {
+        TileEffect();
+        confettiBlast.SetActive(true);
         yield return new WaitForSeconds(1.5f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    void TileEffect()
+    {
+        for (int i = 0; i < tiles.Length; i++)
+        {
+            SpriteRenderer spriteRenderer = tiles[i].GetComponent<SpriteRenderer>();
+            spriteRenderer.DOColor(_currentMatColor, 0.5f).OnComplete(() =>
+            {
+                spriteRenderer.DOColor(new Color32(65, 65, 65, 255), 0.5f);
+            });
+        }
     }
     public Material GetUpdatedMaterial(int code)
     {

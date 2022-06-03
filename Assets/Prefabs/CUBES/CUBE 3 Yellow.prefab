@@ -118,7 +118,7 @@ GameObject:
   - component: {fileID: 4093096790208694655}
   - component: {fileID: 4093096790208694652}
   - component: {fileID: 4093096790208694653}
-  - component: {fileID: 690532438899440028}
+  - component: {fileID: 3813422000945827530}
   m_Layer: 0
   m_Name: CUBE 3 Yellow
   m_TagString: cube
@@ -334,9 +334,10 @@ MonoBehaviour:
   speed: 200
   code: 3
   codeText: {fileID: 4093096790242774967}
+  bone: {fileID: 0}
   cubeState: 0
---- !u!64 &690532438899440028
-MeshCollider:
+--- !u!65 &3813422000945827530
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -345,10 +346,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 8718313242848948513, guid: 10e2af7f1eeeae148822961e28616d3c, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 0.9606036, y: 1, z: 0.94665384}
+  m_Center: {x: -0.0005182624, y: 0.0076143146, z: -0.00000008940697}
 --- !u!1 &4093096790242774965
 GameObject:
   m_ObjectHideFlags: 0

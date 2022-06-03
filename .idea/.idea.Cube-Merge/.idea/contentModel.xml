@@ -333,9 +333,13 @@
           <e p="Miscellaneous" t="Include">
             <e p="CubeLock.cs" t="Include" />
             <e p="LevelTransitionEffect.cs" t="Include" />
+            <e p="ScrollingTex.cs" t="Include" />
           </e>
           <e p="MovementTest.cs" t="Include" />
           <e p="ObstacleMovement.cs" t="Include" />
+          <e p="Powerups" t="Include">
+            <e p="Adder.cs" t="Include" />
+          </e>
           <e p="UIManager.cs" t="Include" />
         </e>
         <e p="TextMesh Pro" t="Include">

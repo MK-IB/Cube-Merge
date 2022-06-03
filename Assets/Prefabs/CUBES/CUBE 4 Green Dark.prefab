@@ -101,7 +101,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.9735535, y: 1, z: 0.9722353}
+  m_Size: {x: 0.94024813, y: 1, z: 0.95524}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &2727447668155511519
 Rigidbody:
@@ -243,6 +243,7 @@ MonoBehaviour:
   speed: 200
   code: 4
   codeText: {fileID: 2727447668190639127}
+  bone: {fileID: 0}
   cubeState: 0
 --- !u!1 &2727447668190639125
 GameObject:

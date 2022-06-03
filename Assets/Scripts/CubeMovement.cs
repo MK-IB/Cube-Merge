@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
+using DG.Tweening.Plugins;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -16,6 +18,7 @@ public class CubeMovement : MonoBehaviour
     private Collider _collider;
     public int code;
     public TextMeshPro codeText;
+    public Transform bone;
 
     public enum CubeState
     {
@@ -64,8 +67,10 @@ public class CubeMovement : MonoBehaviour
             if (rightHit.collider.CompareTag("border"))
             {
                 canMoveRight = false;
+            }else if (rightHit.collider.CompareTag("cube"))
+            {
+                
             }
-            else canMoveRight = true;
         }else canMoveRight = true;
         if (Physics.Raycast(transform.position, -transform.right, out leftHit, _maxDist))
         {
@@ -106,8 +111,9 @@ public class CubeMovement : MonoBehaviour
         {
             //transform.Translate(_moveDir * speed * Time.deltaTime);
             _rb.AddForce(_moveDir * speed * Time.fixedDeltaTime, ForceMode.Impulse);
+            cubeState = CubeState.MOVING;
         }
-        /*if (_rb.velocity.magnitude <= 2.5f)
+        if (_rb.velocity.magnitude <= 2.5f)
         {
             isStatic = true;
             cubeState = CubeState.IDLE;
@@ -116,7 +122,7 @@ public class CubeMovement : MonoBehaviour
         {
             isStatic = false;
             cubeState = CubeState.MOVING;
-        }*/
+        }
     }
 
     private void OnCollisionEnter(Collision other)
@@ -175,6 +181,14 @@ public class CubeMovement : MonoBehaviour
                 codeText.text = code.ToString();
             }
         }
+
+        if (other.gameObject.CompareTag("adder"))
+        {
+            code += other.gameObject.GetComponent<Adder>().adderValue;
+            codeText.text = code.ToString();
+            other.gameObject.SetActive(false);
+            PlayEffects();
+        }
     }
 
     void PlayEffects()
@@ -209,7 +223,6 @@ public class CubeMovement : MonoBehaviour
             _moveDir = transform.right;
             canMove = true;
             _rb.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezeRotation;
-            InGameManager.instance.RefreshCubeRBs();
         }
         
     }
@@ -220,7 +233,6 @@ public class CubeMovement : MonoBehaviour
             _moveDir = -transform.right;
             canMove = true;
             _rb.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezeRotation;
-            InGameManager.instance.RefreshCubeRBs();
         }
     }
     void MoveForward()
@@ -230,7 +242,7 @@ public class CubeMovement : MonoBehaviour
             _moveDir = transform.forward;
             canMove = true;
             _rb.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezeRotation;
-            InGameManager.instance.RefreshCubeRBs();
+            //bone.DOLocalMove(new Vector3(0, bone.position.y, 0.004f), 0.8f);
         }
     }
     void MoveBackward()
@@ -240,7 +252,6 @@ public class CubeMovement : MonoBehaviour
             _moveDir = -transform.forward;
             canMove = true;
             _rb.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezeRotation;
-            InGameManager.instance.RefreshCubeRBs();
         }
     }
 }

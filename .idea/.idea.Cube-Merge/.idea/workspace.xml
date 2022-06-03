@@ -19,44 +19,116 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a3e96c8e-1c1b-4ba9-bf2f-04f28762b7b8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Miscellaneous/CubeLock.cs" afterDir="false" />
+    <list default="true" id="0a5593c0-1194-4849-a085-edca56ef9b18" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Miscellaneous/ScrollingTex.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Powerups/Adder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Cube-Merge/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Cube-Merge/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Cube-Merge/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Cube-Merge/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 8.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 8.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Heebo-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Heebo-Bold SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Heebo-Bold.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Heebo-Bold.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 1.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 1.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 10.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 10.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 10.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 10.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 11.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 11.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 11.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 11.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 12.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 12.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 13.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 13.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 13.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 13.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 14.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 14.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 14.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 14.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 15 Lock Key.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 15 Lock Key.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 2.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 2.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 3.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 4.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 4.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 4.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 4.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 5.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 5.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 6.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 6.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 6.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 6.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 7.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 7.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 8 Obstacle.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 8 Obstacle.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 9.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 9.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Levels/Test Level.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Test Level.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Cube Materials/1- red.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Cube Materials/1- red.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Frame 1333.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Frame 1333.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/border.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/border.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/border.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/border.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/cube merge effect mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/cube merge effect mat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/floor.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/floor.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/trail.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/trail.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/wooden block.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/wooden block.mat.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CUBES/CUBE 1 Red.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CUBES/CUBE 1 Red.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CUBES/CUBE 2 Blue.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CUBES/CUBE 2 Blue.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CUBES/CUBE 3 Yellow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CUBES/CUBE 3 Yellow.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CUBES/CUBE 4 Green Dark.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CUBES/CUBE 4 Green Dark.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CUBES/CUBE 5 Violet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CUBES/CUBE 5 Violet.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CUBES/CUBE 6 Orange.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CUBES/CUBE 6 Orange.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CUBES/CUBE 7  Pink.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CUBES/CUBE 7  Pink.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CUBES/CUBE Lock.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CUBES/CUBE Lock.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CUBES/Cube Obstacle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CUBES/Cube Obstacle.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CUBES/Cube Obstacle.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CUBES/Cube Obstacle.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/InGameManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/InGameManager.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/CubeMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CubeMovement.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/InGameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InGameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Frame 1333.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Frame 1333.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Miscellaneous/LevelTransitionEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Miscellaneous/LevelTransitionEffect.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ObstacleMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ObstacleMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ObstacleMovement.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ObstacleMovement.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UIManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UIManager.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Circle In.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Circle In.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Circle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Circle.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Transition Down.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Transition Down.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Transition Left.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Transition Left.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Transition Right.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Transition Right.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Transition Up.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Transition Up.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Transition.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Transition.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/Frame 1334.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Frame 1334.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" afterDir="false" />
     </list>
+    <list id="739735c2-b39c-4ed9-b1ba-97c66255c95f" name="Key Lock Level Added" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="f76ade7eab53ac3b466682641287f40a76d4281e" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/InGameManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UIManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CubeMovement.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ObstacleMovement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Miscellaneous/LevelTransitionEffect.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Miscellaneous/CubeLock.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UIManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ObstacleMovement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MovementTest.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/InGameManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CubeMovement.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Prefabs/CUBES/CUBE 3 Yellow.prefab" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Powerups/Adder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Prefabs/CUBES/CUBE 2 Blue.prefab" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Prefabs/CUBES/CUBE 1 Red.prefab" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/InputControl.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/InputEventsManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Miscellaneous/CubeLock.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Miscellaneous/ScrollingTex.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -68,8 +140,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/UIManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ObstacleMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/InGameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Miscellaneous/ScrollingTex.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Powerups/Adder.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CubeMovement.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Miscellaneous/CubeLock.cs" />
       </list>
     </option>
   </component>
