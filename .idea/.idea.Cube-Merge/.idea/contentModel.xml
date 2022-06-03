@@ -326,6 +326,7 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="BossLevel.cs" t="Include" />
           <e p="CubeMovement.cs" t="Include" />
           <e p="InGameManager.cs" t="Include" />
           <e p="InputControl.cs" t="Include" />

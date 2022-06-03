@@ -19,13 +19,13 @@ public class InGameManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
+        cubes = GameObject.FindGameObjectsWithTag("cube");
+        tiles = GameObject.FindGameObjectsWithTag("tile");
     }
 
     private void Start()
     {
         InputEventsManager.instance.LevelCompleteEvent += CheckLevelComplete;
-        cubes = GameObject.FindGameObjectsWithTag("cube");
-        tiles = GameObject.FindGameObjectsWithTag("tile");
     }
 
     void CheckLevelComplete()
@@ -60,6 +60,17 @@ public class InGameManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
+    public List<GameObject> GetActiveCubes()
+    {
+        List<GameObject> _activeCubes = new List<GameObject>();
+        for (int i = 0; i < cubes.Length; i++)
+        {
+            if(cubes[i].activeInHierarchy)
+                _activeCubes.Add(cubes[i]);
+        }
+
+        return _activeCubes;
+    }
     void TileEffect()
     {
         for (int i = 0; i < tiles.Length; i++)

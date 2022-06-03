@@ -191,6 +191,7 @@ MonoBehaviour:
   - {fileID: 2100000, guid: e4ae87aaa78b89a49b4e79a1f4992680, type: 2}
   - {fileID: 2100000, guid: 6c58723465c590b41a14585222704941, type: 2}
   - {fileID: 2100000, guid: 48bf7093be9d1a24fae4710a757999fc, type: 2}
+  - {fileID: 2100000, guid: 86698c8450198cf4b952af743b37e312, type: 2}
   confettiBlast: {fileID: 8962043851986877042}
   cubes: []
   tiles: []
