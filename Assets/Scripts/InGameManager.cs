@@ -14,8 +14,12 @@ public class InGameManager : MonoBehaviour
     public GameObject confettiBlast;
     [HideInInspector] public GameObject[] cubes;
     [HideInInspector] public GameObject[] tiles;
+    [HideInInspector] public bool gameOver;
     private Color _currentMatColor;
- 
+    
+    public int targetCubeCode;
+    public bool bossLevel;
+
     private void Awake()
     {
         instance = this;
@@ -30,32 +34,50 @@ public class InGameManager : MonoBehaviour
 
     void CheckLevelComplete()
     {
-        int activeCubesCounter = 0;
-        for (int i = 0; i < cubes.Length; i++)
+        if(!bossLevel)
         {
-            if (cubes[i].activeInHierarchy)
-                activeCubesCounter++;
-        }
-
-        if (activeCubesCounter == 1)
-        {
+            int activeCubesCounter = 0;
             for (int i = 0; i < cubes.Length; i++)
             {
                 if (cubes[i].activeInHierarchy)
+                    activeCubesCounter++;
+            }
+
+            if (activeCubesCounter == 1)
+            {
+                for (int i = 0; i < cubes.Length; i++)
                 {
-                    _currentMatColor = cubes[i].GetComponent<Renderer>().material.color;
+                    if (cubes[i].activeInHierarchy)
+                    {
+                        _currentMatColor = cubes[i].GetComponent<Renderer>().material.color;
+                    }
+                }
+
+                StartCoroutine(LevelWinCondition());
+            }
+
+            else activeCubesCounter = 0;
+        }
+        else
+        {
+            List<GameObject> allCubes = BossLevel.instance._gameCubes;
+            for (int i = 0; i < allCubes.Count; i++)
+            {
+                if (allCubes[i].GetComponent<CubeMovement>().code == targetCubeCode)
+                {
+                    StartCoroutine(LevelWinCondition());
+                    BossLevel.instance.startSpawning = false;
+                    return;
                 }
             }
-            StartCoroutine(LevelWinCondition());
         }
-        
-        else activeCubesCounter = 0;
     }
 
     IEnumerator LevelWinCondition()
     {
         TileEffect();
         confettiBlast.SetActive(true);
+        gameOver = true;
         yield return new WaitForSeconds(1.5f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }

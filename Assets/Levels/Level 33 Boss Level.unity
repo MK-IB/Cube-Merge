@@ -2266,6 +2266,7 @@ MonoBehaviour:
   - {fileID: 1877418771067111102, guid: 0b6bd6f58d80d81409e8582177001d95, type: 3}
   - {fileID: 2115999421300208393, guid: 434c3670c211e954cac0f22ee5b6ea35, type: 3}
   startSpawning: 0
+  _gameCubes: []
 --- !u!1 &1679738825
 GameObject:
   m_ObjectHideFlags: 0
@@ -2603,6 +2604,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8962043852178068761, guid: 23f42be2d8b2b154391fb44af29c154a,
+        type: 3}
+      propertyPath: bossLevel
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8962043852178068761, guid: 23f42be2d8b2b154391fb44af29c154a,
+        type: 3}
+      propertyPath: targetCubeCode
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8962043852178068762, guid: 23f42be2d8b2b154391fb44af29c154a,
         type: 3}

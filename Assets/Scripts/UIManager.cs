@@ -8,11 +8,13 @@ public class UIManager : MonoBehaviour
 {
     public Image squareTransitionImg;
     public Image circleTransitionImg;
+    public GameObject bossLevelText;
 
     private void Start()
     {
         squareTransitionImg.color = GetRandomColor();
         circleTransitionImg.color = GetRandomColor();
+        if(InGameManager.instance.bossLevel) bossLevelText.SetActive(true);
     }
 
     private Color32 GetRandomColor()

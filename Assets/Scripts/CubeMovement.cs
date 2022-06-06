@@ -28,7 +28,7 @@ public class CubeMovement : MonoBehaviour
 
     public CubeState cubeState;
     private ParticleSystem _mergeParticle;
-    private GameObject _cubeEffect;
+    private Animator _cubeEffectAnim;
     private TrailRenderer _trailRenderer;
 
     private void Start()
@@ -43,7 +43,7 @@ public class CubeMovement : MonoBehaviour
         cubeState = CubeState.IDLE;
         codeText.text = code.ToString();
         _mergeParticle = transform.GetChild(0).GetComponent<ParticleSystem>();
-        _cubeEffect = transform.GetChild(1).gameObject;
+        _cubeEffectAnim = transform.GetChild(1).gameObject.GetComponent<Animator>();
         _trailRenderer = GetComponent<TrailRenderer>();
     }
     private void OnDisable()
@@ -194,7 +194,7 @@ public class CubeMovement : MonoBehaviour
     void PlayEffects()
     {
         _mergeParticle.Play();
-        _cubeEffect.SetActive(true);
+        _cubeEffectAnim.SetTrigger("effect");
         GetComponent<Renderer>().material = InGameManager.instance.GetUpdatedMaterial(code);
         StartCoroutine(CheckLevelComplete());
 
