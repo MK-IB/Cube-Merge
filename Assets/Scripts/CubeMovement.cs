@@ -107,7 +107,7 @@ public class CubeMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (canMove)
+        if (canMove && !InGameManager.instance.gameOver)
         {
             //transform.Translate(_moveDir * speed * Time.deltaTime);
             _rb.AddForce(_moveDir * speed * Time.fixedDeltaTime, ForceMode.Impulse);

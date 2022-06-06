@@ -20,22 +20,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a5593c0-1194-4849-a085-edca56ef9b18" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Cube-Merge/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Cube-Merge/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Cube-Merge/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Cube-Merge/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Cube Effect.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Cube Effect.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Cube Merge Anim.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Cube Merge Anim.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 33 Boss Level.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 33 Boss Level.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 3.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 5.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 5.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 6.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 6.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Cube Materials/1- red.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Cube Materials/1- red.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Cube Materials/10- green shamrock.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Cube Materials/10- green shamrock.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Cube Materials/11- orange dark.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Cube Materials/11- orange dark.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Cube Materials/2- blue.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Cube Materials/2- blue.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Cube Materials/3- yellow.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Cube Materials/3- yellow.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Cube Materials/4- green dark.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Cube Materials/4- green dark.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Materials/Cube Materials/5- violet.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Cube Materials/5- violet.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Cube Materials/6- orange.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Cube Materials/6- orange.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Materials/Cube Materials/7- pink.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Cube Materials/7- pink.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CUBES/CUBE 2 Blue.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CUBES/CUBE 2 Blue.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CUBES/CUBE 3 Yellow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CUBES/CUBE 3 Yellow.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CUBES/CUBE 5 Violet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CUBES/CUBE 5 Violet.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Cube Materials/8- green light.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Cube Materials/8- green light.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Cube Materials/9- blue dark.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Cube Materials/9- blue dark.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Cube Materials/merge effect cube.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Cube Materials/merge effect cube.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Cube Materials/win floor mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Cube Materials/win floor mat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Cube Materials/wooden.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Cube Materials/wooden.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/InGameManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/InGameManager.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BossLevel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BossLevel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/CubeMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CubeMovement.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/InGameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InGameManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UIManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/BurstAotSettings_StandaloneWindows.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/BurstAotSettings_StandaloneWindows.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/CommonBurstAotSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/CommonBurstAotSettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <list id="739735c2-b39c-4ed9-b1ba-97c66255c95f" name="Key Lock Level Added" comment="" />
@@ -82,9 +93,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Miscellaneous/ScrollingTex.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Powerups/Adder.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BossLevel.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/InGameManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UIManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CubeMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UIManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/InGameManager.cs" />
       </list>
     </option>
   </component>
