@@ -179,7 +179,7 @@ GameObject:
   - component: {fileID: 6373228133999310797}
   - component: {fileID: 2159839782213152936}
   - component: {fileID: 2159839782213152935}
-  - component: {fileID: 2159839782213152934}
+  - component: {fileID: 8659854833004281047}
   m_Layer: 0
   m_Name: CUBE Lock
   m_TagString: Untagged
@@ -283,8 +283,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mergeEffect: {fileID: 129898, guid: 3c292e3005d2b6740aae78732cc7a794, type: 3}
---- !u!64 &2159839782213152934
-MeshCollider:
+--- !u!65 &8659854833004281047
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -293,7 +293,6 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -6718752605777550442, guid: aaa12a98ecab0a44abe8cd80d3c148a7, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 0.9461415, y: 0.92950857, z: 0.99946994}
+  m_Center: {x: -0.0005182626, y: -0.00000009159708, z: -0.0073487926}

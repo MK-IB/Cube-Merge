@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Random = UnityEngine.Random;
 
 public class InGameManager : MonoBehaviour
 {
@@ -29,6 +30,7 @@ public class InGameManager : MonoBehaviour
     private void Start()
     {
         InputEventsManager.instance.LevelCompleteEvent += CheckLevelComplete;
+        Vibration.Init();
     }
 
     void CheckLevelComplete()
@@ -74,11 +76,30 @@ public class InGameManager : MonoBehaviour
 
     IEnumerator LevelWinCondition()
     {
-        TileEffect();
-        confettiBlast.SetActive(true);
-        gameOver = true;
-        yield return new WaitForSeconds(1.5f);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        if(!gameOver)
+        {
+            TileEffect();
+            SoundsManager.instance.PlayClip(SoundsManager.instance.win);
+            confettiBlast.SetActive(true);
+            gameOver = true;
+            yield return new WaitForSeconds(1.5f);
+            LoadNextLevel();
+        }
+    }
+
+    void LoadNextLevel()
+    {
+        if (PlayerPrefs.GetInt("level", 1) >= SceneManager.sceneCountInBuildSettings - 1)
+        {
+            SceneManager.LoadScene(Random.Range(0, SceneManager.sceneCountInBuildSettings - 1));
+            PlayerPrefs.SetInt("level", (PlayerPrefs.GetInt("level", 1) + 1));
+        }
+        else
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            PlayerPrefs.SetInt("level", (PlayerPrefs.GetInt("level", 1) + 1));
+        }
+        PlayerPrefs.SetInt("levelnumber", PlayerPrefs.GetInt("levelnumber", 1) + 1);
     }
 
     public List<GameObject> GetActiveCubes()
@@ -107,10 +128,7 @@ public class InGameManager : MonoBehaviour
     {
         return cubeMaterials[code - 1];
     }
-    private void Update()
-    {
-        
-    }
+    
     public void ReloadScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);

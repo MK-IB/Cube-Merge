@@ -45,6 +45,7 @@ public class CubeMovement : MonoBehaviour
         _mergeParticle = transform.GetChild(0).GetComponent<ParticleSystem>();
         _cubeEffectAnim = transform.GetChild(1).gameObject.GetComponent<Animator>();
         _trailRenderer = GetComponent<TrailRenderer>();
+        transform.DOScale(Vector3.zero, 0.5f).From();
     }
     private void OnDisable()
     {
@@ -201,6 +202,9 @@ public class CubeMovement : MonoBehaviour
         Color matColor = GetComponent<Renderer>().material.color;
         _trailRenderer.startColor = matColor;
         _trailRenderer.endColor = matColor;
+        
+        //SoundsManager.instance.PlayPop();
+        //Vibration.Vibrate(27);
     }
     IEnumerator CheckLevelComplete()
     {
@@ -223,6 +227,7 @@ public class CubeMovement : MonoBehaviour
             _moveDir = transform.right;
             canMove = true;
             _rb.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezeRotation;
+            //ResetRb();
         }
         
     }
@@ -233,6 +238,7 @@ public class CubeMovement : MonoBehaviour
             _moveDir = -transform.right;
             canMove = true;
             _rb.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezeRotation;
+            //ResetRb();
         }
     }
     void MoveForward()
@@ -242,6 +248,7 @@ public class CubeMovement : MonoBehaviour
             _moveDir = transform.forward;
             canMove = true;
             _rb.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezeRotation;
+            //ResetRb();
             //bone.DOLocalMove(new Vector3(0, bone.position.y, 0.004f), 0.8f);
         }
     }
@@ -252,6 +259,13 @@ public class CubeMovement : MonoBehaviour
             _moveDir = -transform.forward;
             canMove = true;
             _rb.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezeRotation;
+            //ResetRb();
         }
+    }
+
+    void ResetRb()
+    {
+        _rb.isKinematic = true;
+        _rb.isKinematic = false;
     }
 }

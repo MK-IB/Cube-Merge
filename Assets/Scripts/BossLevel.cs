@@ -61,7 +61,6 @@ public class BossLevel : MonoBehaviour
                 spawnPos = new Vector3(spawnPos.x, 0, spawnPos.z);
                 GameObject newCube = Instantiate(spawningCubes[Random.Range(0, spawningCubes.Count)],spawnPos, quaternion.identity);
                 _gameCubes.Add(newCube);
-                newCube.transform.DOScale(Vector3.zero, 0.25f).From();
             }
         }
     }

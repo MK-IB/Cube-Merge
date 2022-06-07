@@ -63,8 +63,11 @@
     <explicitExcludes>
       <Path>.git</Path>
       <Path>.idea</Path>
+      <Path>Cube Merge_BurstDebugInformation_DoNotShip</Path>
+      <Path>Cube Merge_Data</Path>
       <Path>Library</Path>
       <Path>Logs</Path>
+      <Path>MonoBleedingEdge</Path>
       <Path>Temp</Path>
       <Path>UserSettings</Path>
       <Path>obj</Path>

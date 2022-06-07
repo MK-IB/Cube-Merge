@@ -343,12 +343,12 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4093096790208694650}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 70c28b09fa4a68e44bf73f135ec9dade, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.92918366, y: 1, z: 0.947206}
-  m_Center: {x: -0.0005182624, y: 0.0076143146, z: 0.0020005703}
+  m_Size: {x: 0.9307934, y: 1, z: 0.9403151}
+  m_Center: {x: -0.0005182624, y: 0.0076143146, z: -0.0012019873}
 --- !u!1 &4093096790242774965
 GameObject:
   m_ObjectHideFlags: 0
