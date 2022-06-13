@@ -31,6 +31,8 @@ public class InGameManager : MonoBehaviour
     {
         InputEventsManager.instance.LevelCompleteEvent += CheckLevelComplete;
         Vibration.Init();
+        Transform cam = FindObjectOfType<Camera>().transform;
+        cam.DOMove(new Vector3(cam.position.x - 0.35f, cam.position.y, cam.position.z), 0.2f).From();
     }
 
     void CheckLevelComplete()

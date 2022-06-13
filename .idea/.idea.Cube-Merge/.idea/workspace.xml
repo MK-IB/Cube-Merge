@@ -20,92 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a5593c0-1194-4849-a085-edca56ef9b18" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/MainMenu.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SoundsManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Cube-Merge/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Cube-Merge/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Cube-Merge/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Cube-Merge/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Cube-Merge/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Cube-Merge/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 10.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 10.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 11.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 11.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 12.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 12.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 13.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 13.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 14.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 14.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 15 Lock Key.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 15 Lock Key.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 16.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 16.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 17.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 17.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 18.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 18.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 19.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 19.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 2.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 20.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 20.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 21.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 21.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 22.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 22.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 23.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 23.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 24 Power Up Adder.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 24 Power Up Adder.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 25.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 25.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 26.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 26.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 27.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 27.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 28.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 28.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 29.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 29.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 3.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 30.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 30.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 31.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 31.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 32.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 32.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 33 Boss Level.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 33 Boss Level.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 34.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 34.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 35.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 35.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 36.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 36.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 37.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 37.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 38.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 38.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 39.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 39.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 4.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 4.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 40 Obstacle.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 40 Obstacle.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 41.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 41.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 42.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 42.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 43.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 43.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 44.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 44.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 45.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 45.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 46.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 46.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 47.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 47.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 48.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 48.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 49 Adder.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 49 Adder.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 5.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 5.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 50.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 50.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 51.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 51.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 52.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 52.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 53.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 53.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 54.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 54.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 55.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 55.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 56.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 56.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 57.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 57.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 58.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 58.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 59.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 59.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 6.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 6.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 60.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 60.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 7.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 7.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 8 Obstacle.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 8 Obstacle.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 9.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 9.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Cube Materials/2- blue.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Cube Materials/2- blue.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Cube Materials/6- orange.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Cube Materials/6- orange.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Cube Materials/7- pink.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Cube Materials/7- pink.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Cube Smooth Friction.physicMaterial" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Cube Smooth Friction.physicMaterial" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CUBES/CUBE 1 Red.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CUBES/CUBE 1 Red.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CUBES/CUBE 2 Blue.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CUBES/CUBE 2 Blue.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CUBES/CUBE 3 Yellow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CUBES/CUBE 3 Yellow.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 90.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 90.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CUBES/CUBE 4 Green Dark.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CUBES/CUBE 4 Green Dark.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CUBES/CUBE 5 Violet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CUBES/CUBE 5 Violet.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CUBES/CUBE 6 Orange.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CUBES/CUBE 6 Orange.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CUBES/CUBE Lock.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CUBES/CUBE Lock.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CUBES/Cube Key.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CUBES/Cube Key.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/InGameManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/InGameManager.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BossLevel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BossLevel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CubeMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CubeMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CUBES/Power Up Adder.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CUBES/Power Up Adder.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/InGameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InGameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UIManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
     </list>
     <list id="739735c2-b39c-4ed9-b1ba-97c66255c95f" name="Key Lock Level Added" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -154,9 +78,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Powerups/Adder.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SoundsManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UIManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/InGameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BossLevel.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CubeMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/InGameManager.cs" />
       </list>
     </option>
   </component>
